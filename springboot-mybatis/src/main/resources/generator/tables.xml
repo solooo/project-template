@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tables>
+    <table tableName="hello" domainObjectName="Hello">
+        <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+    </table>
+</tables>
