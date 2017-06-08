@@ -1,5 +1,7 @@
 package net.solooo.template.controller;
 
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import net.solooo.template.base.exception.WebException;
 import net.solooo.template.base.page.PageResult;
 import net.solooo.template.entity.Hello;
@@ -31,6 +33,7 @@ public class HelloController {
      * @param name 名称
      * @return List
      */
+    @ApiOperation(value = "获取列表", notes = "")
     @RequestMapping(value = "", method = RequestMethod.GET)
     public List<Hello> hello(String name) {
         return helloService.findAll(name);
@@ -56,6 +59,8 @@ public class HelloController {
      * @param hello hello
      * @return Hello
      */
+    @ApiOperation(value="新增", notes="新增数据")
+    @ApiImplicitParam(name = "hello", value = "数据对象", required = true, dataType = "Hello")
     @RequestMapping(value = "", method = RequestMethod.POST)
     public Hello save(Hello hello) {
         if (StringUtils.isBlank(hello.getName())) {

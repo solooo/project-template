@@ -13,5 +13,5 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 
 mybatis:
-    type-aliases-package: com.htdatacloud.**.entity
+    type-aliases-package: com.**.entity
     mapperLocations: classpath:mapper/xml/*Mapper.xml
